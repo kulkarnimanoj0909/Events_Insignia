@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fda94f;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 15px;
+    background-color: #fef0d8;
+    border-radius: 0 0 20px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .navbar button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .event-section {
+    background: #b73819 url('assets/pattern.png') repeat;
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    border-radius: 30px;
+    margin: 20px auto;
+    max-width: 500px;
+  }
+  
+  .section-img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  /* .event-title {
+    font-size: 32px;
+    color: #ffcd32;
+    margin-bottom: 20px;
+    font-family: 'Cinzel Decorative', serif;
+
+  } */
+  .event-title {
+    font-size: 34px;
+    color: #ffcd32;
+    margin-bottom: 20px;
+    font-family: 'Cinzel Decorative', serif;
+    text-shadow: 1px 1px #5e2b1b;
+  }
+  
+  .event-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .event-buttons a {
+    padding: 10px 16px;
+    background-color: #fef0d8;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+  
+  .event-buttons a:hover {
+    background-color: #ffd28f;
+  }
+  
+  @media (max-width: 600px) {
+    .event-buttons a {
+      font-size: 14px;
+      padding: 8px 14px;
+    }
+    .section-img {
+      width: 120px;
+    }
+  }
+  
