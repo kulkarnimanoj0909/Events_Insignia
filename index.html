@@ -4,21 +4,62 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Events Page</title>
- <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- <nav class="navbar">
-    <button>Home</button>
-    <button>Events</button>
-    <button>Schedule</button>
-  </nav> -->
-  <nav class="navbar" id="navbar"></nav>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <button onclick="location.href='index.html'">Home</button>
+    <button onclick="document.getElementById('eventContainer').scrollIntoView({ behavior: 'smooth' })">Events</button>
+    <button onclick="location.href='schedule.html'">Schedule</button>
+  </nav>
 
+  <!-- Events Container with static content -->
+  <main id="eventContainer">
 
-  <main id="eventContainer"></main>
- 
+    <!-- Cultural Section -->
+    <section class="event-section">
+      <img src="assets/cultural.png" alt="Cultural" class="section-img" />
+      <h2 class="event-title">Cultural</h2>
+      <div class="event-buttons">
+        <a href="details.html?event=Drama">Drama</a>
+        <a href="details.html?event=Dance">Dance</a>
+        <a href="details.html?event=Singing">Singing</a>
+        <a href="details.html?event=Concert">Concert</a>
+        <a href="details.html?event=Fine%20Art">Fine Art</a>
+      </div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- Centralized Section -->
+    <section class="event-section">
+      <img src="assets/centralized.png" alt="Centralized" class="section-img" />
+      <h2 class="event-title">Centralized</h2>
+      <div class="event-buttons">
+        <a href="details.html?event=Dance">Dance</a>
+        <a href="details.html?event=Singing">Singing</a>
+        <a href="details.html?event=Concert">Concert</a>
+        <a href="details.html?event=Fine%20Art">Fine Art</a>
+      </div>
+    </section>
+
+    <!-- Technical Section -->
+    <section class="event-section">
+      <img src="assets/technical.png" alt="Technical" class="section-img" />
+      <h2 class="event-title">Technical</h2>
+      <div class="event-buttons">
+        <a href="branches.html?branch=CSE">CSE</a>
+        <a href="branches.html?branch=IS">IS</a>
+        <a href="branches.html?branch=AIML">AIML</a>
+        <a href="branches.html?branch=E%26C">E&C</a>
+        <a href="branches.html?branch=CIVIL">CIVIL</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Optional: JS for dynamic rendering if needed -->
+  <!-- <script src="script.js"></script> -->
+
 </body>
 </html>
