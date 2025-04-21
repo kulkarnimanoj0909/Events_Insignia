@@ -1,6 +1,11 @@
 /* Base Styling */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  @font-face {
+    font-family: 'Samarkan';
+    src: url('assets/Samarkan.ttf') format('truetype');
+  }
+  font-family: 'Samarkan';
+  src: url('assets/Samarkan.ttf') format('truetype');
   background: #b73819 url('assets/pattern.png') repeat;
   margin: 0;
   padding: 0;
@@ -11,8 +16,10 @@ body {
   min-height: 100vh;
 }
 
+
+
 /* Container to give bordered template feel */
-.container {
+/* .container {
   max-width: 1100px;
   margin: 30px auto;
   background-color: rgba(255, 255, 255, 0.06);
@@ -23,7 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-}
+} */
 
 /* Sticky Navbar with Flex */
 .navbar {
@@ -71,14 +78,15 @@ main {
 }
 
 .section-img {
-  width: 140px;
+  width: 240px;
   margin-bottom: 15px;
 }
 
 .event-title {
-  font-size: 32px;
+  font-size: 38px;
   color: #ffcd32;
-  font-family: 'Cinzel Decorative', serif;
+  font-family: 'Samarkan';
+  src: url('assets/Samarkan.ttf') format('truetype');
   text-shadow: 1px 1px #5e2b1b;
   margin-bottom: 25px;
 }
@@ -119,7 +127,7 @@ main {
 
 /* Responsive Styles */
 @media (max-width: 600px) {
-  .navbar {
+  navbar {
     gap: 10px;
   }
 
@@ -128,8 +136,8 @@ main {
     padding: 10px 16px;
   }
 
-  .section-img {
-    width: 110px;
+  section-img {
+    width: 210px;
   }
 
   .event-title {
@@ -151,7 +159,7 @@ footer {
   padding-bottom: 20px;
 }
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Samarkan', sans-serif;
   background: #b73819 url('assets/pattern.png') repeat;
   margin: 0;
   padding: 0;
@@ -162,7 +170,7 @@ body {
   flex-direction: column;
 }
 
-main {
+/* main {
   flex: 1;
   padding: 40px 20px;
   max-width: 1100px;
@@ -173,7 +181,7 @@ main {
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-}
+} */
 .custom-divider {
   display: flex;
   align-items: center;
@@ -192,4 +200,46 @@ main {
   .custom-divider img {
     width: 140px;
   }
+}
+/* body {
+  font-family: 'Summer Surfing Serif', serif;
+  background: #b73819 url('assets/Background.webp') repeat;
+  margin: 0;
+  padding: 0;
+  color: white;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} */
+ body {
+  font-family: 'Samarkan', sans-serif;
+  background: #b73819 url('assets/Background.webp') repeat;
+  margin: 0;
+  padding: 0;
+  color: white;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Added shadow */
+}
+
+/* Footer Section */
+footer {
+  text-align: center;
+  color: #ffd28f;
+  margin-top: 30px;
+  font-size: 14px;
+  padding-bottom: 20px;
+  flex-shrink: 0;
+}
+
+/* Footer Image */
+.footer-img {
+  width: 100%;
+  max-width: 1000px; /* You can adjust the max width */
+  margin: 0 auto;
+  display: block;
+  opacity: 0.9;
 }
