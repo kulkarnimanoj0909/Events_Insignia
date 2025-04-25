@@ -38,10 +38,14 @@ body {
   gap: 20px;
   padding: 15px 10px;
   background-color: #fef0d8;
-  border-radius: 0 0 20px 20px;
+  border-radius: 50px;
   position: sticky;
-  top: 0;
+  top: 10px;
   z-index: 100;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar button {
@@ -50,9 +54,12 @@ body {
   font-size: clamp(14px, 2vw, 18px);
   font-weight: bold;
   cursor: pointer;
-  padding: 8px 12px;
+  padding: 8px 15px;
   color: #5e2b1b;
   transition: background-color 0.2s ease, transform 0.2s ease;
+  flex: 1;
+  min-width: 80px;
+  text-align: center;
 }
 
 .navbar button:hover,
@@ -124,15 +131,17 @@ img[src="assets/EVENTS.svg"] {
 }
 
 .event-buttons a {
-  padding: clamp(8px, 1.5vw, 12px) clamp(12px, 2vw, 20px);
+  padding: clamp(10px, 1.8vw, 15px) clamp(16px, 2.5vw, 25px);
   background-color: #fef0d8;
   border-radius: 25px;
   text-decoration: none;
   color: #000;
   font-weight: 600;
-  font-size: clamp(14px, 1.5vw, 16px);
+  font-size: clamp(15px, 1.8vw, 18px);
   transition: background 0.2s, transform 0.2s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  min-width: 80px;
+  text-align: center;
 }
 
 .event-buttons a:hover,
@@ -165,7 +174,15 @@ img[src="assets/EVENTS.svg"] {
   .navbar {
     gap: 10px;
     padding: 10px 5px;
+    width: 90%;
+    top: 5px;
   }
+  
+  /* Hide side decorations on mobile */
+  .side-decoration {
+    display: none;
+  }
+}
   
   .event-buttons {
     gap: 10px 15px;
@@ -182,6 +199,12 @@ img[src="assets/EVENTS.svg"] {
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    width: 95%;
+    padding: 8px 5px;
+    gap: 5px;
+  }
+  
   main {
     padding: 20px 10px;
   }
@@ -197,8 +220,9 @@ img[src="assets/EVENTS.svg"] {
   }
   
   .event-buttons a {
-    padding: 8px 12px;
-    font-size: 12px;
+    padding: 10px 15px;
+    font-size: 14px;
+    min-width: 70px;
   }
   
   .footer-img {
@@ -266,6 +290,35 @@ footer {
   flex-direction: column;
   min-height: 100vh;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7); /* Added shadow */
+  position: relative;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Side decorations */
+.side-decoration {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  z-index: -1; /* Behind content */
+  pointer-events: none; /* Allow clicking through */
+  opacity: 0.7;
+  width: auto;
+  max-width: 12vw; /* Limit width to 12% of viewport */
+}
+
+.left-decoration {
+  left: 0;
+}
+
+.right-decoration {
+  right: 0;
+}
+
+/* Larger screens - show decorations more prominently */
+@media (min-width: 1400px) {
+  .side-decoration {
+    max-width: 15vw; /* Slightly larger on big screens */
+  }
 }
 
 /* Footer Section */
@@ -274,15 +327,18 @@ footer {
   color: #ffd28f;
   margin-top: 30px;
   font-size: 14px;
-  padding-bottom: 20px;
+  padding-bottom: 0;
   flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Footer Image */
 .footer-img {
   width: 100%;
-  max-width: 1000px; /* You can adjust the max width */
+  max-width: 1000px;
   margin: 0 auto;
   display: block;
   opacity: 0.9;
+  margin-bottom: -100px; /* This pushes the image down so part of it appears below the viewport */
 }
